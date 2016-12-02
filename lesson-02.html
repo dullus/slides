@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Web kurz 02</title>
+
+		<meta name="description" content="Web kurz 02">
+		<meta name="author" content="Ness KDC">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+		<style>
+            .subhead--navy {
+                color: #2a76dd;
+            }
+            code.subhead {
+                color: brown;
+                text-transform: initial;
+                font-weight: bold;
+            }
+			.reveal section img {
+				box-shadow: none;
+    			border: none;
+    			background: transparent;
+    			padding: 0;
+    			margin: 0;
+			}
+			.reveal section img.fifty {
+				max-width: 50%;
+			}
+            .reveal pre code {
+                font-size: 1.1em;
+                line-height: 1.2em;
+                font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+                color: #383a42;
+                background: #fafafa;
+            }
+		</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Web 02</h1>
+                    <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+				<h2>HTML &amp; CSS</h2>
+				</section>
+
+				<section>
+					<h1>Web 02</h1>
+                    <img alt="*" class="fifty" src="img/02/home.png" />
+				</section>
+
+				<section>
+					<section>
+						<h3>ÚLOHA 0</h3>
+						<p>Príprava základnej štruktúry súborov</p>
+					</section>
+					<section>
+						<h4><span class="subhead--navy">A</span>: Vytvorte nasledovnú štruktúru súborov:</h4>
+						<pre>
+
+	css/style.css
+	image/&hellip;
+	view/moja-podstranka.html
+	index.html
+						</pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">B</span>: V súbore
+                            <code class="subhead">index.html</code> si vytvorte základnú štruktúru pomocou tagov
+                            <code class="subhead">&lt;head&gt;</code> a
+                            <code class="subhead">&lt;body&gt;</code>. V hlavičke html súboru uveďte názov vašej stránky a pomocou tagu
+                            <code class="subhead">&lt;link&gt;</code> nastavte ikonu stránky, ktorá sa zobrazí v prehliadači. Obrázok ikony vložte do adresára
+                            <code class="subhead">image</code>.
+                        </h4>
+                        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">http://www.iana.org/assignments/media-types/media-types.xhtml</a>
+                        <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;title&gt;Moja stranka&lt;/title&gt;
+&lt;link rel="icon" href="image/moja-ikona.png" type="png"&gt;
+                        </code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">C</span>: Zahrňte css súbor
+                            <code class="subhead">style.css</code> v hlavičke html súboru
+                            <code class="subhead">index.html</code> pomocou tagu
+                            <code class="subhead">&lt;link&gt;</code>.
+                        </h4>
+                        <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;link rel="stylesheet" href="css/style.css" type="text/css"&gt;
+                        </code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>ÚLOHA 1</h3>
+                        <ul>
+						    <li>Práca so súbormi <code class="subhead">index.html</code> a
+                                <code class="subhead">moja-podstranka.html</code>.</li>
+						    <li>Vytvorenie základnej štruktúry obsahu stránky a prepojenie s inými podstránkami.</li>
+                        </ul>
+					</section>
+                    <section>
+                        <h3>ÚLOHA 1</h3>
+                        <img src="img/02/layout.png" alt="layout"/>
+                    </section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">A</span>: Pomocou tagu
+                            <code class="subhead">&lt;footer&gt;</code> vytvorte zápätie vašej stránky. V ňom využite HTML kód pre zobrazenie
+                            <code class="subhead">&copy;</code> a prostredníctvom tagu
+                            <code class="subhead">&lt;a&gt;</code> vytvorte minimálne jedno prepojenie na externú web-stránku a jedno prepojenie na váš súbor
+                            <code class="subhead">moja-podstranka.html</code>, do ktorého môžete umiestniť blok textu.
+                        </h4>
+						<a href="http://www.ascii.cl/htmlcodes.htm" target="_blank">http://www.ascii.cl/htmlcodes.htm</a>
+						<pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;footer&gt;
+    &lt;p&gt;&lt;a href="&hellip;" target="&hellip;"&gt;&lt;/a&gt; &hellip; &lt;/p&gt;
+&lt;/footer&gt;
+						</code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">B</span>: Podobným spôsobom implementujte hlavičku vašej stránky - tag
+                            <code class="subhead">&lt;header&gt;</code>. V nej vytvorte navigáciu
+                            <code class="subhead">&lt;nav&gt;</code>, ktorá bude obsahovať zoznam
+                            <code class="subhead">&lt;ul&gt;</code> s minimálne troma položkami
+                            <code class="subhead">&lt;li&gt;</code>. To bude prestavovať menu stránky, kde jednotlivé položky budú slúžiť ako odkazy na jednotlivé sekcie stránky.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#&hellip;"&gt;&hellip;&lt;/a&gt;&lt;/li&gt;
+            &hellip;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+						</code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">C</span>: Pomocou tagu
+                            <code class="subhead">&lt;section&gt;</code> vytvorte sekciu pre každú položku vášho menu s unikátnym atribútom
+                            <code class="subhead">id</code>.
+                            <code class="subhead">Id</code> sekcie musí korešpondovať s odkazom v menu. Pridajte nadpis do každej sekcie.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;section id="&hellip;"&gt;
+ &hellip;
+&lt;/section&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h4><span class="subhead--navy">D</span>: Pridajte komentáre do vášho zdrojového kódu.</h4>
+                        <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;!--komentar--&gt;
+                        </code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>ÚLOHA 2</h3>
+						<p>Práca so súborom <code class="subhead">index.html</code> - viac html tagov.</p>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">A</span>: Do sekcie 1 vložte obrázok. Nastavte mu šírku a výšku pomocou HTML atribútov. Obrázok uložte do adresára
+                            <code class="subhead">image</code>.
+                        </h4>
+                        <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;img src="&hellip;" alt="&hellip;" width="&hellip;" height="&hellip;"&gt;
+                        </code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">B</span>: V druhej sekcii si vyskúšajte prácu s textom. Vytvorte viacero podnadpisov
+                            <code class="subhead">&lt;h1&gt;</code> -
+                            <code class="subhead">&lt;h6&gt;</code> a blokov textu
+                            <code class="subhead">&lt;p&gt;</code>, jednotlivé súčasti zabaľte do
+                            <code class="subhead">&lt;div&gt;</code>. V texte využite nasledujúce html tagy -
+                            <code class="subhead">&lt;hr&gt;</code>,
+                            <code class="subhead">&lt;sub&gt;</code>,
+                            <code class="subhead">&lt;sup&gt;</code>,
+                            <code class="subhead">&lt;b&gt;</code>,
+                            <code class="subhead">&lt;i&gt;</code>,
+                            <code class="subhead">&lt;small&gt;</code>,
+                            <code class="subhead">&lt;strong&gt;</code>,
+                            <code class="subhead">&lt;em&gt;</code>,
+                            <code class="subhead">&lt;mark&gt;</code>,
+                            <code class="subhead">&lt;del&gt;</code>,
+                            <code class="subhead">&lt;ins&gt;</code> a
+                            <code class="subhead">&lt;span&gt;</code>.
+                        </h4>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">C</span>: Do sekcie 3 vložte formulár, použite základné formulárové elementy ako
+                            <code class="subhead">&lt;input&gt;</code>,
+                            <code class="subhead">&lt;textarea&gt;</code> a
+                            <code class="subhead">&lt;select&gt;</code>. Pre každý element definujte
+                            <code class="subhead">&lt;label&gt;</code>. Na konci pridajte odosielací
+                            <code class="subhead">&lt;button&gt;</code>.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;form&gt;
+    &lt;div&gt;
+        &lt;label for="&hellip;"&gt;&hellip;&lt;/label&gt;
+        &lt;input id="&hellip;" name="&hellip;" type="text"&gt;
+    &lt;/div&gt;
+&hellip;
+&lt;/form&gt;
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>ÚLOHA 3</h3>
+                        <ul>
+						    <li>Štýlovanie web-stránky.</li>
+						    <li>Práca so súbormi <code class="subhead">index.html</code> a <code class="subhead">style.css</code>.</li>
+                        </ul>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">A</span>: Do súboru
+                            <code class="subhead">style.css</code> pridajte štýly pre nasledujúce html elementy:
+                            <code class="subhead">&lt;body&gt;</code>,
+                            <code class="subhead">&lt;p&gt;</code>,
+                            <code class="subhead">&lt;h1&gt;</code>-
+                            <code class="subhead">&lt;h6&gt;</code>. Využite vlastnosti ako:
+                            <code class="subhead">background-color</code>,
+                            <code class="subhead">font-size</code>,
+                            <code class="subhead">color</code>,
+                            <code class="subhead">text-align</code>,
+                            <code class="subhead">text-transform</code>, &hellip;
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+body {
+    background-color: beige;
+    &hellip;
+}
+						</code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">B</span>: Pridajte ďalšie štýly pre
+                            <code class="subhead">&lt;footer&gt;</code>. Využite vlastnosti z bodu A +
+                            <code class="subhead">margin</code>,
+                            <code class="subhead">padding</code>,
+                            <code class="subhead">border</code>, &hellip;
+                        </h4>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">C</span>: Vycentrujte pozíciu obrázka v sekcii 1 prostredníctvom atribútu
+                            <code class="subhead">class</code>. Zmeňte farbu pozadia pre niektorú zo sekcií prostredníctvom jej
+                            <code class="subhead">id</code>.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+.moja-trieda {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mojeId {
+    background-color: black;
+}
+						</code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">D</span>: Pridajte ďalšie štýly pre
+                            <code class="subhead">&lt;header&gt;</code>. Využite vlastnosti z predchádzajúcich bodov. Navyše, pridajte štýly pre menu stránky - zobrazenie položiek zoznamu
+                            <code class="subhead">inline</code>.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+.moje-ul {
+    list-style: none;
+}
+.moje-ul li {
+    display: inline;
+}
+.moje-ul li a {
+&hellip;
+}
+						</code></pre>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">E</span>: Vyskúšajte si základné použitie flex-boxu. Jednotlivým
+                            <code class="subhead">&lt;div&gt;</code> elementom pre bloky textu s podnadpismi v sekcii 2 definujte atribút
+                            <code class="subhead">class="flex-item"</code>. Následne zabaľte všetky tieto bloky do ďalšieho
+                            <code class="subhead">&lt;div&gt;</code>, ktorému tiež pridajte atribút
+                            <code class="subhead">class</code> - bude reprezentovať kontajner. Definujte štýly pre tieto triedy.
+                        </h4>
+						<pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+}
+.flex-item {
+    background-color: &hellip;;
+    margin: &hellip;;
+    padding: &hellip;;
+}
+						</code></pre>
+					</section>
+                    <section>
+                        <h4>
+                            <span class="subhead--navy">E</span>: Flex-box: <code class="subhead">flex-direction</code>
+						</h4>
+						<img src="img/02/flexbox-flex-direction.png" alt="flexbox-direction"/>
+					</section>
+					<section>
+                        <h4>
+                            <span class="subhead--navy">E</span>: Flex-box: <code class="subhead">align-items</code>
+						</h4>
+						<img src="img/02/flexbox.png" alt="flexbox"/>
+					</section>
+					<section>
+						<h4><span class="subhead--navy">F</span>: Doštýlujte zvyšné časti stránky.</h4>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>BONUS</h3>
+					</section>
+					<section>
+						<h4><span class="subhead--navy">BONUS 1</span></h4>
+                        <ul>
+						    <li>Zmeňte font písma na vašej web-stránke.</li>
+                        </ul>
+						<a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a>
+					</section>
+					<section>
+						<h4><span class="subhead--navy">BONUS 2</span></h4>
+                        <ul>
+						    <li>Pridajte do formulára ďalšie form elementy</li>
+						    <li>(radio, checkbox, &hellip;)</li>
+                        </ul>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,2 +1,1 @@
-# slides
-SLides
+# Slides for Web
