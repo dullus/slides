@@ -107,9 +107,53 @@
                 </ul>
             </section>
 
-            <section id="uloha1">
+            <section>
+                    <section>
+                        <h3>Úloha 1</h3>
+                        <p>
+                            Vytvorte program, ktorý na základe počtu like-ov ohodnotí obľúbenosť videa.
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            Zadefinujte premennú <em>"numberOfLikes"</em> a uložte do nej ľubovolné číslo.
+                            <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let numberOfLikes = 10;
+
+// Pre kontrolu si vzdy pozrieme pomocou console.log() ake cislo sa nam nachadza v numberOfLikes
+console.log(numberOfLikes);
+                            </code></pre>
+                        </p>
+                    </section>
+
+                    <section>
+                        <p>
+                            Vytvorte podmienku <em>if</em> ktorá rozhodne či video je obľúbené alebo nie. <br>
+                            Výsledok vypíšeme do konzoly.
+                        </p>
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+if (numberOfLikes &gt; 10) {
+    console.log('Super !!! Tvoje video vyzerá byť obľubené');
+}
+
+if (numberOfLikes &lt; 10) {
+    console.log('Nuda, Musíš sa viacej snažiť');
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h4>Bonus</h4>
+                        <p>
+                            Zadefinujte druhú premennú <em>"numberOfDislikes"</em> a zmeňte podmienku vyhodnotenia výsledku
+                            na základe pomeru medzi počtom like-ov a dislike-ov.
+                        </p>
+                    </section>
+            </section>
+
+            <section id="uloha2">
                 <section>
-                    <h2>Úloha 1</h2>
+                    <h2>Úloha 2</h2>
 
                     <p>
                         Vytvorte jednoduchú hru: <em>"Hádaj na aké číslo myslím"</em>. <br>
@@ -124,7 +168,7 @@
                 </section>
 
                 <section>
-                    <h3>Vymyslite niekto nadpis</h3>
+                    <h3>Načítanie programu do stránky</h3>
 
                     <p>
                         Vytvorte súbor <code class="subhead">js/guess-the-number.js</code>
@@ -175,8 +219,7 @@ let guess = prompt(...);
                     </p>
 
                     <p>
-                        Spravte cyklus, ktorý sa bude užívatela pýtat na jeho tip dokým netrafí správnu odpoveď.
-
+                        Implementujte cyklus, ktorý sa bude užívatela pýtat na jeho tip pokiaľ neuhádne správnu odpoveď.
                         <em> Pozor!!! Vstup od užívatela je vždy typu string </em>
                         <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
 while(...) {
@@ -189,12 +232,21 @@ while(...) {
 
                 <section>
                     <p>
-                        Ak hráč trafil správne číslo ukončíme hru s pogratulovaním.
+                        Ak hráč uhádol správne číslo ukončíme hru s pogratulovaním.
                     </p>
                     <p>
                         Funkcia <code class="subhead">alert(odkaz)</code> je podobná funkcii <code class="subhead">prompt()</code>, len si od užívatela nepýta na žiadnu odpoveď.
                     </p>
+                </section>
 
+            </section>
+
+            <section>
+                <h3>Chceš sa naučiť viac?</h3>
+                <ul>
+                    <li><a href="https://www.codecademy.com/" target="_blank">codecademy</a> (silno odporúčané)</li>
+                    <li><a href="https://www.codewars.com/" target="_blank">codewars</a> (rôzne logické úlohy, pokročilé)</li>
+                </ul>
             </section>
 
         </div>
