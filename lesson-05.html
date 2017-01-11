@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web kurz 05</title>
+
+    <meta name="description" content="Web kurz 05">
+    <meta name="author" content="Ness KDC">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+    <style>
+        .subhead--navy {
+            color: #2a76dd;
+        }
+
+        code.subhead {
+            color: brown;
+            text-transform: initial;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal section img.fifty {
+            max-width: 50%;
+        }
+
+        .reveal pre code {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            color: #383a42;
+            background: #fafafa;
+        }
+
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5 {
+            text-transform: none;
+        }
+
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Web 05</h1>
+                <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+                <h2>Projekt <i>Contact Book</i> 01</h2>
+            </section>
+
+            <section>
+                <h3>Zadanie</h3>
+                <ul>
+                    <li>Vypíšte zoznam kontaktov z API poskytnutého serverom. Zoznam na desktope bude v dvoch stĺpcoch a pre malé rozlíšenia v jednom. Dizajn musí byť vycentrovaný a fluid do 1024px, následne s pevnou šírkou.</li>
+                    <li>Po kliknutí na kontakt v zozname sa objaví popup okno s detailom kontaktu.</li>
+                    <li>V detail okne bude tlačidlo umožňujúce editáciu kontaktu a upload obrázka.</li>
+                    <li>K dispozícii je RESTfull API kontaktu na servri s možnosťou uploadu obrázka.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Rozdelenie na podúlohy</h3>
+                <ol>
+                    <li><b>Contact box</b> - kontakt boxík - prvok zoznamu kontaktov</li>
+                    <li><b>Contact list</b> - zoznam vytvorený z kontakt boxíkov naplnených dátami zo servra</li>
+                    <li><b>Contact detail</b> - popup s detailom kontaktu po kliknutí na prvok zoznamu</li>
+                    <li><b>Contact edit</b> - popup s kontaktu, odoslanie na server, upload obrázka</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Palety farieb</h3>
+                <a href="http://www.color-hex.com/color-palettes/">http://www.color-hex.com/color-palettes/</a>
+                <img alt="*" src="img/05/palette-01.png" />
+            </section>
+
+            <section>
+                <h3>Palety farieb</h3>
+                <img alt="*" src="img/05/palette-02.png" />
+            </section>
+
+            <section>
+                <h3>Palety farieb</h3>
+                <img alt="*" src="img/05/palette-by-designer.png" />
+            </section>
+
+            <section>
+                <h3>User interface</h3>
+                <img alt="*" src="img/05/ui-01.png" />
+            </section>
+
+            <section>
+                <h3>Wireframes</h3>
+                <img alt="*" src="img/05/wireframes.png" />
+            </section>
+
+            <section>
+                <h3>Desktop UI by designer</h3>
+                <img alt="*" src="img/05/ui-by-designer.png" />
+            </section>
+
+            <section>
+                <h3>Mobile UI by designer</h3>
+                <img alt="*" src="img/05/ui-mobile-by-designer.png" />
+            </section>
+
+            <section>
+                <h3>CSS BEM</h3>
+                <h4>Block, Element, Modifier</h4>
+                <img alt="*" src="img/05/bem.jpg" />
+            </section>
+
+            <section>
+                <h3>CSS BEM - Blocks</h3>
+                <img alt="*" src="img/05/blocks.png" />
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
