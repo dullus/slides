@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web kurz 04</title>
+
+    <meta name="description" content="Web kurz 04">
+    <meta name="author" content="Ness KDC">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+    <style>
+        .subhead--navy {
+            color: #2a76dd;
+        }
+
+        code.subhead {
+            color: brown;
+            text-transform: initial;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal section img.fifty {
+            max-width: 50%;
+        }
+
+        .reveal pre code {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            color: #383a42;
+            background: #fafafa;
+        }
+
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5 {
+            text-transform: none;
+        }
+
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Web 04</h1>
+                <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+                <h2>JavaScript</h2>
+            </section>
+
+            <section>
+                <h3>História</h3>
+
+                <ul>
+                    <li>vznik: máj 1995 (za 10 dní)</li>
+                    <li>Autor: <a href="https://en.wikipedia.org/wiki/Brendan_Eich" target="_blank">Brendan Eich</a></li>
+                    <li>viac na <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Wikipedia.org</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Využitie</h3>
+
+                <ul>
+                    <li>Interpretovaný skriptovací jazyk</li>
+                    <li>Podpora všetkých používaných prehliadačov</li>
+                    <li>Server (<a href="https://nodejs.org/en/" target="_blank">nodejs</a>)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Hlavné vlastnosti</h3>
+
+                <ul>
+                    <li>Objektovo orientovaný</li> 
+                    <li>Dynamický</li>
+                    <li>Spätne kompatibilný</li>
+                    <li>viac na <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Wikipedia.org</a></li>
+                </ul>
+            </section>
+
+            <section>
+                    <section>
+                        <h3>Úloha 1</h3>
+                        <p>
+                            Vytvorte program, ktorý na základe počtu like-ov ohodnotí obľúbenosť videa.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Načítanie programu do stránky</h3>
+
+                        <p>
+                            Vytvorte súbor <code class="subhead">js/likes.js</code>
+                        </p>
+                        <p>
+                            Do ľubovolného <code class="subhead">.html</code> súboru pridajte odkaz na tento súbor. <br>
+
+                            <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+    &lt;script src="/js/likes.js"&gt;&lt;/script&gt;
+                            </code></pre>
+                        </p>
+
+                        <p>
+                            Pomocou <code class="subhead">console.log('ahoj')</code> sa presvedčte, že sa daný súbor načítal.
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            Zadefinujte premennú <em>"numberOfLikes"</em> a uložte do nej ľubovolné číslo.
+                            <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let numberOfLikes = 10;
+
+// Pre kontrolu si vzdy pozrieme pomocou console.log() ake cislo sa nam nachadza v numberOfLikes
+console.log(numberOfLikes);
+                            </code></pre>
+                        </p>
+                    </section>
+
+                    <section>
+                        <p>
+                            Vytvorte podmienku <em>if</em> ktorá rozhodne či video je obľúbené alebo nie. <br>
+                            Výsledok vypíšeme do konzoly.
+                        </p>
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+if (numberOfLikes &gt; 10) {
+    console.log('Super !!! Tvoje video vyzerá byť obľubené');
+}
+
+if (numberOfLikes &lt; 10) {
+    console.log('Nuda, Musíš sa viacej snažiť');
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h4>Bonus</h4>
+                        <p>
+                            Zadefinujte druhú premennú <em>"numberOfDislikes"</em> a zmeňte podmienku vyhodnotenia výsledku
+                            na základe pomeru medzi počtom like-ov a dislike-ov.
+                        </p>
+                    </section>
+            </section>
+
+            <section id="uloha2">
+                <section>
+                    <h2>Úloha 2</h2>
+
+                    <p>
+                        Vytvorte jednoduchú hru: <em>"Hádaj na aké číslo myslím"</em>. <br>
+                        Napíšte program, ktorý:
+                    </p>
+                    <ul>
+                        <li>náhodne vyberie číslo od 0 - 100</li>
+                        <li>na základe používatelovho vstupu vyhodnotí, či je <em>myslené</em> číslo menšie alebo väčšie</li>
+                        <li>Bude sa pýtať užívatela na číslo, kým ho neuhádne.</li>
+                        <li>Oboznámi užívatela o úspešnom uhádnutí čísla</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Načítanie programu do stránky</h3>
+
+                    <p>
+                        Vytvorte súbor <code class="subhead">js/guess-the-number.js</code>
+                    </p>
+                    <p>
+                        Do ľubovolného <code class="subhead">.html</code> súboru pridajte odkaz na tento súbor. <br>
+
+                        <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;script src="/js/guess-the-number.js"&gt;&lt;/script&gt;
+                        </code></pre>
+                    </p>
+
+                    <p>
+                        Pomocou <code class="subhead">console.log('ahoj')</code> sa presvedčte, že sa daný súbor načítal.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Vytvorenie náhodného čísla</h3>
+
+                    <p>
+                        Pomocou funkcie <code class="subhead">Math.random()</code> vytvoríme náhodne číslo.
+                    </p>
+                    <p>
+                        Táto funkcia vracia náhodné číslo z polootvoreného intervalu <em>&lt;0, 1)</em><br>
+                    </p>
+                    <p>
+                        Následne pomocou matematiky vytvoríme číslo, ktoré bude spadať do intervalu <em>&lt;0, 100&gt;</em>
+                    </p>
+
+                    <p>Číslo si uložíme do premennej nasledovným spôsobom: <br>
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let randomNumber = Math.random();
+let secretNumber = Math.floor(randomNumber * (100 + 1));
+
+// Pre kontrolu si vzdy pozrieme pomocou console.log() ake cislo sa nam nachadza v secretNumber
+console.log(secretNumber);
+                        </code></pre>
+                    </p>
+                </section>
+
+                <section>
+                    <p>
+                        Pomocou funkcie <code class="subhead">prompt(odkaz)</code> sa spýtame užívatela na jeho tip. <br>
+                        
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let guess = prompt(...);
+                        </code></pre>
+                    </p>
+
+                    <p>
+                         <code class="subhead">prompt(...)</code> vracia vstup od užívatela vo forme textu (string). <br>
+                         Pomocou funkcie <code class="subhead">parseInt(cislo)</code> pretransformujeme text na celé číslo (number).
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let guessedNumber = parseInt(guess);
+                        </code></pre>
+                    </p>
+                </section>
+
+                <section>
+                    <p>
+                        Implementujte cyklus, ktorý sa bude užívatela pýtat na jeho tip pokiaľ neuhádne správnu odpoveď.
+                        <em> Pozor!!! Vstup od užívatela je vždy typu string </em>
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+while(...) {
+    // Zistit ci cislo je vacsie alebo mensie (pomocou if)
+    ...
+    // Spytat sa na dalsi tip (prompt a parseInt)
+    ...
+}
+                        </code></pre>
+
+                    </p>
+                </section>
+
+                <section>
+                    <p>
+                        Ak hráč uhádol správne číslo ukončíme hru s pogratulovaním.
+                    </p>
+                    <p>
+                        Funkcia <code class="subhead">alert(odkaz)</code> je podobná funkcii <code class="subhead">prompt()</code>, len si od užívatela nepýta na žiadnu odpoveď.
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+alert('Spravne !!! Uhadol si. Myslel som na cislo: ' + secretNumber);
+                        </code></pre>
+                    </p>
+                </section>
+
+                <section>
+                    <h4>Bonusové úlohy</h4>
+                    <ol>
+                        <li>Ošetriť vstupy od užívatela</li>
+                        <li>Počítať počet pokusov</li>
+                        <li>Hrať iba na obmedzený počet pokusov</li>
+                    </ol>
+                </section>
+
+            </section>
+
+            <section>
+                <h3>Chceš sa naučiť viac?</h3>
+                <ul>
+                    <li><a href="https://www.codecademy.com/" target="_blank">codecademy</a> (silno odporúčané)</li>
+                    <li><a href="https://www.codewars.com/" target="_blank">codewars</a> (rôzne logické úlohy, pokročilé)</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
