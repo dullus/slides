@@ -214,12 +214,13 @@ if (numberOfLikes &lt; 10) {
                         Táto funkcia vracia náhodné číslo z polootvoreného intervalu <em>&lt;0, 1)</em><br>
                     </p>
                     <p>
-                        Následne pomocou matematiky vytvoríme číslo, ktoré bude spadať do intervalu &lt;0, 100&gt;
+                        Následne pomocou matematiky vytvoríme číslo, ktoré bude spadať do intervalu <em>&lt;0, 100&gt;</em>
                     </p>
 
                     <p>Číslo si uložíme do premennej nasledovným spôsobom: <br>
                         <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
-let secretNumber = Math.random();
+let randomNumber = Math.random();
+let secretNumber = Math.floor(randomNumber * (100 + 1));
 
 // Pre kontrolu si vzdy pozrieme pomocou console.log() ake cislo sa nam nachadza v secretNumber
 console.log(secretNumber);
@@ -237,11 +238,24 @@ let guess = prompt(...);
                     </p>
 
                     <p>
+                         <code class="subhead">prompt(...)</code> vracia vstup od užívatela vo forme textu (string). <br>
+                         Pomocou funkcie <code class="subhead">parseInt(cislo)</code> pretransformujeme text na celé číslo (number).
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+let guessedNumber = parseInt(guess);
+                        </code></pre>
+                    </p>
+                </section>
+
+                <section>
+                    <p>
                         Implementujte cyklus, ktorý sa bude užívatela pýtat na jeho tip pokiaľ neuhádne správnu odpoveď.
                         <em> Pozor!!! Vstup od užívatela je vždy typu string </em>
                         <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
 while(...) {
-    // program
+    // Zistit ci cislo je vacsie alebo mensie (pomocou if)
+    ...
+    // Spytat sa na dalsi tip (prompt a parseInt)
+    ...
 }
                         </code></pre>
 
@@ -254,7 +268,19 @@ while(...) {
                     </p>
                     <p>
                         Funkcia <code class="subhead">alert(odkaz)</code> je podobná funkcii <code class="subhead">prompt()</code>, len si od užívatela nepýta na žiadnu odpoveď.
+                        <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+alert('Spravne !!! Uhadol si. Myslel som na cislo: ' + secretNumber);
+                        </code></pre>
                     </p>
+                </section>
+
+                <section>
+                    <h4>Bonusové úlohy</h4>
+                    <ol>
+                        <li>Ošetriť vstupy od užívatela</li>
+                        <li>Počítať počet pokusov</li>
+                        <li>Hrať iba na obmedzený počet pokusov</li>
+                    </ol>
                 </section>
 
             </section>
