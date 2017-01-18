@@ -79,29 +79,37 @@
 
             <section>
                 <h3>NodeJS</h3>
+                <img src="img/06/node.png" alt="*"/>
                 <ul>
                     <li>Softwarový systém navrhnutý pre škálovateľné internetové aplikácie,
                         predovšetkým webových serverov.</li>
                     <li>Obsahuje V8 JavaScript engine od spoločnosti Google a niekoľko štandardných knižníc
                         na prácu so súbormi a sieťou</li>
-                    <li><b>npm</b> - správca balíčkov</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>NPM</h3>
+                <img src="img/06/npm.png" alt="*"/>
+                <h4>Node package manager</h4>
+                <ul>
+                    <li>správca node balíčkov</li>
+                    <li>inštalácia, update, závislosti</li>
                 </ul>
             </section>
 
             <section>
                 <h3>Grunt</h3>
+                <img src="img/06/grunt.png" alt="*"/>
                 <ul>
-                    <li>JavaScript task runner</li>
                     <li>automatizácia, uľahčenie a zrýchlenie práce</li>
-                    <li>my použijeme modul <b>browserify</b> spúšťaný <b>gruntom</b> na vyskladanie výsledného JS súboru</li>
+                    <li>my použijeme modul <b>browserify</b> spúšťaný <b>grunt</b>om na vyskladanie výsledného JS súboru</li>
                 </ul>
             </section>
 
             <section>
                 <h3>JSON</h3>
-                <ul>
-                    <li>najbežnejší formát na prenos dát</li>
-                </ul>
+                <h4>najbežnejší formát na prenos dát</h4>
                 <pre style="width:initial;"><code data-trim class="json" style="max-height: initial;">
 {
     "id": 101,
@@ -118,9 +126,7 @@
 
             <section>
                 <h3>XML</h3>
-                <ul>
-                    <li>ďalší bežný formát na prenos dát</li>
-                </ul>
+                <h4>ďalší bežný formát na prenos dát</h4>
                 <pre style="width:initial;"><code data-trim class="xml" style="max-height: initial;">
 &lt;item id="101"&gt;
     &lt;date&gt;&lt;/date&gt;
@@ -135,6 +141,101 @@
     &lt;/obj&gt;
 &lt;/item&gt;
                 </code></pre>
+            </section>
+
+            <section>
+                <h3>AJAX</h3>
+                <h4>Asynchronous JavaScript and XML</h4>
+                <ul>
+                    <li>technika pre dynamické web stránky</li>
+                    <li>zmena obsahu bez nutnosti reload stránky</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AJAX</h3>
+                <img src="img/06/ajax.gif" alt="ajax"/>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Cesta k projektu</h3>
+                    <p>potrebujeme nastaviť cestu v shell-i k projektu</p>
+                    <img src="img/06/sh01.png" alt="*"/>
+                </section>
+                <section>
+                    <h3>npm install</h3>
+                    <p>nainštalujeme potrebné node moduly pre projekt</p>
+                    <img src="img/06/sh02.png" alt="*"/>
+                </section>
+                <section>
+                    <h3>npm install</h3>
+                    <img src="img/06/sh03.png" alt="*"/>
+                </section>
+                <section>
+                    <h3>npm install -g grunt babel-cli</h3>
+                    <p>nainštalujeme potrebné globálne node moduly</p>
+                    <img src="img/06/sh04.png" alt="*"/>
+                </section>
+                <section>
+                    <h3>grunt dev</h3>
+                    <p>spustíme grunt v devel konfigurácii</p>
+                    <img src="img/06/sh05.png" alt="*"/>
+                </section>
+                <section>
+                    <h3>npm start</h3>
+                    <p>naštartujeme server</p>
+                    <img src="img/06/sh06.png" alt="*"/>
+                </section>
+            </section>
+
+            <section>
+                <h3>Iterations in JavaScript</h3>
+                <section>
+                    <h3>prejdenie prvkov poľa</h3>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+// ES5 Array
+var arr = ['a', 'b', 'c'];
+for (var i = 0; i < arr.length; i++) {
+    console.log(i + ': ' + arr[i]);
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>prejdenie prvkov poľa</h3>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+// ES5/6
+arr.forEach((item, index) => {
+    console.log(`${index}: ${item}`);
+})
+// ES6
+for (let item of arr) {
+    console.log(item);
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>prejdenie prvkov objektu</h3>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+// ES5 Object
+var obj = {
+    id: 10,
+    name: 'Adam'
+};
+for (var key in obj) {
+    console.log(key + ' = ' + obj[key]);
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>prejdenie prvkov objektu</h3>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+// ES5/6
+Object.keys(obj).forEach((key) => {
+    console.log(`${key}: ${obj[key]}`);
+});
+                    </code></pre>
+                </section>
             </section>
 
         </div>
