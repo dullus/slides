@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web kurz 06</title>
+
+    <meta name="description" content="Web kurz 06">
+    <meta name="author" content="Ness KDC">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+    <style>
+        .subhead--navy {
+            color: #2a76dd;
+        }
+
+        code.subhead {
+            color: brown;
+            text-transform: initial;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal section img.fifty {
+            max-width: 50%;
+        }
+
+        .reveal pre code {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            color: #383a42;
+            background: #fafafa;
+        }
+
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5 {
+            text-transform: none;
+        }
+
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Web 06</h1>
+                <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+                <h2>Projekt <i>Contact Book</i> 02</h2>
+                <h3>Contact list</h3>
+            </section>
+
+            <section>
+                <h3>NodeJS</h3>
+                <ul>
+                    <li>Softwarový systém navrhnutý pre škálovateľné internetové aplikácie,
+                        predovšetkým webových serverov.</li>
+                    <li>Obsahuje V8 JavaScript engine od spoločnosti Google a niekoľko štandardných knižníc
+                        na prácu so súbormi a sieťou</li>
+                    <li><b>npm</b> - správca balíčkov</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Grunt</h3>
+                <ul>
+                    <li>JavaScript task runner</li>
+                    <li>automatizácia, uľahčenie a zrýchlenie práce</li>
+                    <li>my použijeme modul <b>browserify</b> spúšťaný <b>gruntom</b> na vyskladanie výsledného JS súboru</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>JSON</h3>
+                <ul>
+                    <li>najbežnejší formát na prenos dát</li>
+                </ul>
+                <pre style="width:initial;"><code data-trim class="json" style="max-height: initial;">
+{
+    "id": 101,
+    "date": null,
+    "name": "Anakin Skywalker",
+    "arr": ["anakin@tatooine.com", "Tattoine"],
+    "obj": {
+        "species": "human",
+        "force": "light"
+    }
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>XML</h3>
+                <ul>
+                    <li>ďalší bežný formát na prenos dát</li>
+                </ul>
+                <pre style="width:initial;"><code data-trim class="xml" style="max-height: initial;">
+&lt;item id="101"&gt;
+    &lt;date&gt;&lt;/date&gt;
+    &lt;name&gt;Anakin Skywalker&lt;/name&gt;
+    &lt;arr&gt;
+        &lt;arr-item&gt;anakin@tatooine.com&lt;/arr-item&gt;
+        &lt;arr-item&gt;Tattoine&lt;/arr-item&gt;
+    &lt;/arr&gt;
+    &lt;obj&gt;
+        &lt;property name="species"&gt;human&lt;/property&gt;
+        &lt;property name="force"&gt;light&lt;/property&gt;
+    &lt;/obj&gt;
+&lt;/item&gt;
+                </code></pre>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
