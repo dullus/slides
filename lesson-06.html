@@ -238,6 +238,38 @@ Object.keys(obj).forEach((key) => {
                 </section>
             </section>
 
+            <section>
+                <h3>Udalosti</h3>
+                <ul>
+                    <li>alebo <i>"eventy"</i>, ktoré:<ul>
+                        <li>boli vyvolané užívateľom (touch, myš, klávesnica)</li>
+                        <li>udiali sa na základe nejakého API<br>(video bolo pauznuté, skončilo sa prehrávanie)</li>
+                        <li>vyvolané programovo našou aplikáciou</li>
+                    </ul></li>
+                    <li>každý event má svoj <b>typ</b> a isté vlastnosti či metódy</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Reakcia na udalosti</h3>
+                <ul>
+                    <li>reagujeme funkciou, ktorú voláme <i>"listener"</i> (poslucháč)<ul>
+                </ul>
+                 <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+var button = document.querySelector('.my-button');
+button.addEventListener('click', function callback(event) {
+	console.log(event.target);
+	console.log(event.currentTarget);
+	button.classList.toggle('active');
+});
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Event loop</h3>
+                <img alt="*" src="img/06/event-loop.png" />
+            </section>
+
         </div>
     </div>
 
