@@ -7,4 +7,4 @@
 - [Lekcia 3. Responsive web design](https://dullus.github.io/slides/lesson-03.html)
 - [Lekcia 4. JavaScript](https://dullus.github.io/slides/lesson-04.html)
     - [Guess the number DEMO](https://dullus.github.io/slides/lesson-04-demo.html)
-
+- [Lekcia 5. Web page interactivity](https://dullus.github.io/slides/lesson-05-alejova.html)
