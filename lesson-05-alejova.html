@@ -112,51 +112,157 @@
             </section>
 
             <section>
-                <h3>Úloha 1.</h3>
+                <section>
+                    <h3>Úloha 1.</h3>
 
-                <p>Zostrojte počítadlo kliknutí na tlačidlo.</p>
+                    <p>Zostrojte počítadlo kliknutí na tlačidlo.</p>
 
-                <article id="counter">
-                    <button id="minus">-</button>
-                    <span id="result"> 10 </span>
-                    <button id="plus">+</button>
-                </article>
-                <script>
-                    let minus = document.getElementById('minus');
-                    let plus = document.getElementById('plus');
-                    let result = document.getElementById('result');
-                    let count = 0;
+                    <article id="counter">
+                        <button id="minus">-</button>
+                        <span id="result"> 10 </span>
+                        <button id="plus">+</button>
+                    </article>
+                    <script>
+                        let minus = document.getElementById('minus');
+                        let plus = document.getElementById('plus');
+                        let result = document.getElementById('result');
+                        let count = 0;
 
-                    function render(count) {
-                        result.innerHTML = count;
-                        result.style.fontSize = 15 + count + 'px';
-                    }
+                        function render(count) {
+                            result.innerHTML = count;
+                            result.style.fontSize = 15 + count + 'px';
+                        }
 
-                    minus.addEventListener('click', function() {
-                        render(--count);
-                    });
+                        minus.addEventListener('click', function() {
+                            render(--count);
+                        });
 
-                    plus.addEventListener('click', function() {
-                        render(++count);
-                    });
+                        plus.addEventListener('click', function() {
+                            render(++count);
+                        });
 
-                    render(count);
-                </script>
+                        render(count);
+                    </script>
+                </section>
+                <section>
+                    <p> Pripravíme si HTML </p>
+
+                    <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+  &lt;button id="plus"&gt;-&lt;/button&gt;
+  &lt;span id="vysledok"&gt; 0 &lt;/span&gt;
+
+  &lt;script src="js/counter.js"&gt;&lt;/script&gt;
+                        </code></pre>
+                </section>
+
+                <section>
+                    <p>
+                        V JavaScripte pridáme 'listener' na <strong><em>click</em></strong> <em>event</em>
+                        pomocou metódy: button<em>.addEventListener(<strong>handler</strong>)</em>
+                    </p>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+    // Nájdeme button na ktorý budeme reagovať
+    let button = document.getElementById('plus');
+
+    // Skôr ako pridáme `listener` na `click`
+    // potrebujeme `handler` funkciu,
+    // ktorá sa spustí na každý `click`
+    function handler(event) {
+        // `event` obsahuje informácie o skutočnosti, ktorá nastala
+        console.log(event)
+    }
+
+    // Pridáme `listener`
+    button.addEventListener(handler);
+                    </code></pre>
+
+                </section>
+
+                <section>
+                    <p>
+                        Chceme aby sa na každý <em>click</em> zmenil text iného elementu.
+                    </p>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+    let result = document.querySelector('#vysledok');
+
+    // Do `handler` funkcie pridáme zmenu textu elementu.
+    function handler(event) {
+        console.log(event);
+        // `innerHTML` je vlastnosť elementu
+        // pomocou nej vieme čítať aj zapisovať celé vnútro elementu
+        result.innerHTML = 'Zmena textu';
+        
+        // Taktiež vieme pridať alebo odobrať triedu elementu
+        result.classList.addClass('clicked');
+    }
+                    </code></pre>
+                </section> 
+
+                <section>
+                    <h4> Úlohy </h4>
+
+                    <ul>
+                        <li> Namiesto zmeny textu vytvorte počítadlo, ktoré sa bude každým kliknutím pripočítavať </li>
+                        <li> Pridajte tlačidlo na odpočítavanie </li>
+                        <li> Pridajte nejaké extra effekty podľa hodnoty počítadla (zmena veĺkosti textu, pridať triedu 'big' ak dosiahne počitadlo viac ako 10 a podobne).
+                </section>
+
             </section>
 
             <section>
-                <h3>Úloha 2.</h3>
+                <section>
+                    <h3>Úloha 2.</h3>
 
-                <p>Načátanie dát za servra.</p>
+                    <p>Načátanie dát za servra.</p>
 
-                <p>
-                    "Nainštalujeme" knižnicu, ktorá nám pomôže s načítavaním dát z iných zdrojov. <br>
-                    Načítame data -> Vyberieme data, ktoré nás zaujímajú -> Vypíšeme ich na stránku.
-                </p>
+                    <p>
+                        "Nainštalujeme" knižnicu, ktorá nám pomôže s načítavaním dát z iných zdrojov. <br>
+                        Načítame data -> Vyberieme data, ktoré nás zaujímajú -> Vypíšeme ich na stránku.
+                    </p>
+                </section>
 
-                </script>
+                <section>
+                    <p> "Nainštalujeme" si <strong>jQuery</strong> knižnicu, ktorú využijeme na sťahovanie dát asynchrónne počas chodu stránky </p>
+                    <p> Stačí len pridať <em>script</em> tag, ktorý smeruje na nejaký zdroj na internete. </p>
+                    
+                    <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"&gt;&lt;/script&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p> Pripravili sme pre vás data o rôznych produktoch na adrese: </p>
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+https://private-anon-b8f2d1a14f-nessnerdik.apiary-mock.com/products
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Pomocou jQuery metódy $.get() stiahnieme data a vypíšeme si ich do konzoly.</p>
+
+                    <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
+// Musime povedat browsru nech pocka kym mame nacitanu celu stranku
+// Potom budeme chciet stiahnut dalsie data
+// Skratka pre $( document ).ready()
+$(function() {
+    // Tu uz mozme bezpecne manipulovat s DOMkom
+    // Stiahneme data pomocou $.getJSON() metody
+    $.getJSON(url, function(data) {
+        // Callback funkcia ktora sa zavola ked data budu stiahnute a k dispozicii
+        console.log(data);
+    })
+});
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p> 
+                        Kedže nemáme my šajnu, čo dokážete urobiť s týmito dátami, <br>
+                        tak nam to ukažte sami.
+                    </p>
+
+                </section>
             </section>
-
         </div>
     </div>
 
