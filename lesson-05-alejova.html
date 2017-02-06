@@ -115,7 +115,7 @@
                 <section>
                     <h3>Úloha 1.</h3>
 
-                    <p>Zostrojte počítadlo kliknutí na tlačidlo.</p>
+                    <p>Naprogramujte počítadlo kliknutí na tlačidlo.</p>
 
                     <article id="counter">
                         <button id="minus">-</button>
@@ -148,7 +148,7 @@
                     <p> Pripravíme si HTML </p>
 
                     <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
-  &lt;button id="plus"&gt;-&lt;/button&gt;
+  &lt;button id="plus"&gt;+&lt;/button&gt;
   &lt;span id="vysledok"&gt; 0 &lt;/span&gt;
 
   &lt;script src="js/counter.js"&gt;&lt;/script&gt;
@@ -213,16 +213,16 @@
                 <section>
                     <h3>Úloha 2.</h3>
 
-                    <p>Načátanie dát za servra.</p>
+                    <p>Načítanie dát za servra</p>
 
                     <p>
-                        "Nainštalujeme" knižnicu, ktorá nám pomôže s načítavaním dát z iných zdrojov. <br>
+                        Stiahneme knižnicu, ktorá nám pomôže s načítavaním dát z iných zdrojov. <br>
                         Načítame data -> Vyberieme data, ktoré nás zaujímajú -> Vypíšeme ich na stránku.
                     </p>
                 </section>
 
                 <section>
-                    <p> "Nainštalujeme" si <strong>jQuery</strong> knižnicu, ktorú využijeme na sťahovanie dát asynchrónne počas chodu stránky </p>
+                    <p> Stiahneme si <strong>jQuery</strong> knižnicu, ktorú využijeme na sťahovanie dát asynchrónne počas chodu stránky </p>
                     <p> Stačí len pridať <em>script</em> tag, ktorý smeruje na nejaký zdroj na internete. </p>
                     
                     <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
@@ -238,17 +238,17 @@ https://private-anon-b8f2d1a14f-nessnerdik.apiary-mock.com/products
                 </section>
 
                 <section>
-                    <p>Pomocou jQuery metódy $.get() stiahnieme data a vypíšeme si ich do konzoly.</p>
+                    <p>Pomocou jQuery metódy $.getJSON() stiahnieme data a vypíšeme si ich do konzoly.</p>
 
                     <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
-// Musime povedat browsru nech pocka kym mame nacitanu celu stranku
-// Potom budeme chciet stiahnut dalsie data
+// Musíme povedaý browsru nech počká kým máme načítanú celú stránku
+// Potom budeme chciet stiahnuť ďalšie dáta
 // Skratka pre $( document ).ready()
 $(function() {
-    // Tu uz mozme bezpecne manipulovat s DOMkom
-    // Stiahneme data pomocou $.getJSON() metody
+    // Tu už môžeme bezpečne manipulovat s DOMkom
+    // Stiahneme dáta pomocou $.getJSON() metódy
     $.getJSON(url, function(data) {
-        // Callback funkcia ktora sa zavola ked data budu stiahnute a k dispozicii
+        // Callback funkcia, ktorá sa zavolá keď dáta budú k dispozícii
         console.log(data);
     })
 });
@@ -260,6 +260,14 @@ $(function() {
                         Kedže nemáme my šajnu, čo dokážete urobiť s týmito dátami, <br>
                         tak nam to ukažte sami.
                     </p>
+
+                    <p> Príklady: </p>
+                    <ul>
+                        <li>Rozdeliť produkty podľa ich typu (headphones, phone, watch, ...)</li>
+                        <li>Vypísať názvy produktov</li>
+                        <li>Zoradiť produkty podľa ceny</li>
+                        <li>Vytvoriť zobrazenie na stránke pre každý produkt</li>
+                    </ul>
 
                 </section>
             </section>
