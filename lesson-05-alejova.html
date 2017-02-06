@@ -81,10 +81,10 @@
                 <h4>(Document object model)</h4>
 
                 <p>
-                    Objektova reprezentácia štruktúry a elementov na stránke
+                    Objektová reprezentácia štruktúry a elementov na stránke
                 </p>
                 <p>
-                    Tieto objekty vieme ovládať pomocou JavaScriptu a meniť ich vlastnosťi,
+                    Tieto objekty vieme ovládať pomocou JavaScriptu a meniť ich vlastnosti,
                     čo sa odzrkadlí na samotnej stránke.
                 </p>
                 <p>
@@ -96,7 +96,7 @@
                 <h3>Event (udalosť)</h3>
 
                 <p>
-                    Za udalosť vo webe považujeme rôzne akcie. <br>
+                    Za udalosť vo webe považujeme rôzne akcie: <br>
                     <ul>
                         <li><em>click</em> na element</li>
                         <li><em>load</em> (načítanie) stránky</li>
@@ -180,7 +180,7 @@
 
                 <section>
                     <p>
-                        Chceme aby sa na každý <em>click</em> zmenil text iného elementu.
+                        Po kliknutí na tlačidlo, zmeňte text HTML elementu <em>#vysledok</em>.
                     </p>
                     <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
     let result = document.querySelector('#vysledok');
@@ -204,7 +204,7 @@
                     <ul>
                         <li> Namiesto zmeny textu vytvorte počítadlo, ktoré sa bude každým kliknutím pripočítavať </li>
                         <li> Pridajte tlačidlo na odpočítavanie </li>
-                        <li> Pridajte nejaké extra effekty podľa hodnoty počítadla (zmena veĺkosti textu, pridať triedu 'big' ak dosiahne počitadlo viac ako 10 a podobne).
+                        <li> Pridajte nejaké extra efekty podľa hodnoty počítadla (zmena veľkosti textu, pridať triedu 'big' ak dosiahne počítadlo viac ako 10 a podobne).
                 </section>
 
             </section>
@@ -213,11 +213,11 @@
                 <section>
                     <h3>Úloha 2.</h3>
 
-                    <p>Načítanie dát za servra</p>
+                    <p>Načítanie dát za servera</p>
 
                     <p>
                         Stiahneme knižnicu, ktorá nám pomôže s načítavaním dát z iných zdrojov. <br>
-                        Načítame data -> Vyberieme data, ktoré nás zaujímajú -> Vypíšeme ich na stránku.
+                        Načítame dáta -> Vyberieme dáta, ktoré nás zaujímajú -> Vypíšeme ich na stránku.
                     </p>
                 </section>
 
@@ -231,14 +231,14 @@
                 </section>
 
                 <section>
-                    <p> Pripravili sme pre vás data o rôznych produktoch na adrese: </p>
+                    <p> Pripravili sme pre vás dáta o rôznych produktoch na adrese: </p>
                     <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
 https://private-anon-b8f2d1a14f-nessnerdik.apiary-mock.com/products
                     </code></pre>
                 </section>
 
                 <section>
-                    <p>Pomocou jQuery metódy $.getJSON() stiahnieme data a vypíšeme si ich do konzoly.</p>
+                    <p>Pomocou jQuery metódy $.getJSON() stiahnieme dáta a vypíšeme si ich do konzoly.</p>
 
                     <pre style="width:initial;"><code data-trim class="javascript" style="max-height: initial;">
 // Musíme povedaý browsru nech počká kým máme načítanú celú stránku
@@ -256,12 +256,7 @@ $(function() {
                 </section>
 
                 <section>
-                    <p> 
-                        Kedže nemáme my šajnu, čo dokážete urobiť s týmito dátami, <br>
-                        tak nam to ukažte sami.
-                    </p>
-
-                    <p> Príklady: </p>
+                    <p> Práca s načítanými dátami: </p>
                     <ul>
                         <li>Rozdeliť produkty podľa ich typu (headphones, phone, watch, ...)</li>
                         <li>Vypísať názvy produktov</li>
