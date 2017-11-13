@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>NESStrain - Bootstrap</title>
+
+    <meta name="description" content="NESStrain - Bootstrap">
+    <meta name="author" content="Ness KDC">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+    <style>
+        .subhead--navy {
+            color: #2a76dd;
+        }
+
+        code.subhead {
+            color: brown;
+            text-transform: initial;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal section .fifty {
+            max-width: 50%;
+        }
+
+        .reveal section .fifty.left {
+            float: left;
+        }
+        .reveal section .fifty.right {
+            float: right;
+        }
+
+        .reveal pre code {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            color: #383a42;
+            background: #fafafa;
+        }
+
+        .reveal section img.center {
+            margin: 15px auto;
+            display: block;
+        }
+
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5 {
+            text-transform: none;
+        }
+
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+                <h2>Bootstrap</h2>
+            </section>
+
+            <section>
+                <h3>Bootstrap</h3>
+                <ul>
+                    <li>Open-source CSS framework &copy; Twitter</li>
+                    <li>Pomáha jednudocho dizajnovať responzívne weby</li>
+                    <li>Obsahuje prepripravené štýly pre akýkoľvek element</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Normalize</h4>
+                <ul>
+                    <li>Zjednocuje štýly formulárových prvkov, ktoré potom vyzerajú vo všetkých browsroch rovnako.</li>
+                </ul>
+                <img alt="*" src="img/05/normalize-selectbox.png" class="fifty left" />
+                <img alt="*" src="img/05/bootstrap-buttons.png" class="fifty right" />
+            </section>
+
+            <section>
+                <h4>Grid system</h4>
+                <ul>
+                    <li>Umožňuje dizajnovať stránky tým, že rozdeľuje obsah do 12 virtuálnych stĺpcov.</li>
+                    <li>Stĺpce je možné spájať a vytvárať tak širšie stĺpce - sekcie.</li>
+                    <li>Každý stĺpec sa môže chovať na rôznych rozlíšeniach inak.</li>
+                    <img alt="*" class="center" src="img/bootstrap/grid-system-illustration.jpg" />
+                </ul>
+            </section>
+
+            <section>
+                <h4>Kontajner</h4>
+                <p>Riadky mriežky umiestňujeme do kontajnéra:</p>
+                <ul>
+                    <li><code class="subhead">.container</code> &ndash; mriežka s pevnou šírkou</li>
+                    <li><code class="subhead">.container-fluid</code> &ndash; na celú šírku stránky</li>
+                </ul>
+                <pre class="fifty left"><code data-trim class="html">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+                <pre class="fifty right"><code data-trim class="html">
+&lt;div class="container-fluid"&gt;
+    &lt;div class="row"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+                <p><a href="https://codepen.io/mborik/pen/ooWmVb">codepen.io/mborik/pen/ooWmVb</a></p>
+            </section>
+
+            <section>
+                <h4>Stĺpce</h4>
+                <img alt="*" class="fifty left" src="img/bootstrap/grid-organization.png" />
+                <ul class="fifty right">
+                    <li>Stĺpce do riadka pridávame ako počet dvanástin, ktoré má daný stĺpec v riadku zaberať,<br>
+                        napr: <code class="subhead">.col-md-4</code></li>
+                    <li>Ak sa počet dvanástin v riadku prekročí, ďalší stĺpec sa automaticky <b>zalomí</b> na ďalší riadok.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Príklad</h4>
+                <pre><code data-trim class="html">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="x-red   col-md-4"&gt;1&lt;/div&gt;
+        &lt;div class="x-green col-md-4"&gt;2&lt;/div&gt;
+        &lt;div class="x-blue  col-md-4"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h4>Stĺpce</h4>
+                <ul class="fifty left">
+                    <li>Triedy veľkosti zariadenia:<ul>
+                    <li><code class="subhead">xs</code> &ndash; telefóny</li>
+                    <li><code class="subhead">sm</code> &ndash; tablety</li>
+                    <li><code class="subhead">md</code> &ndash; notebooky</li>
+                    <li><code class="subhead">lg</code> &ndash; desktopy</li>
+                </ul></li></ul>
+                <div class="fifty right" style="text-align: left">Je môžné ich kombinovať pre jeden obsah stĺpca a ich veľkosť a poloha sa budú prispôsobovať podľa veľkosti zariadenia.</div>
+                <div style="clear:both"><img alt="*" style="width:66%" src="img/bootstrap/zones.png" /></div>
+            </section>
+
+            <section>
+                <p>Rozširujeme definíciu stĺpcov aj pre menšie displaye</p>
+                <pre><code data-trim class="html">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="x-red   col-md-4 col-sm-6 "&gt;1&lt;/div&gt;
+        &lt;div class="x-green col-md-4 col-sm-6 "&gt;2&lt;/div&gt;
+        &lt;div class="x-blue  col-md-4 col-sm-12"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <pre><code data-trim class="html">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="x-red   col-md-4 col-sm-6  col-xs-12"&gt;1&lt;/div&gt;
+        &lt;div class="x-green col-md-4 col-sm-6  col-xs-8 "&gt;2&lt;/div&gt;
+        &lt;div class="x-blue  col-md-4 col-sm-12 col-xs-4 "&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
